@@ -12,8 +12,37 @@ Learning Outcomes :
 - {} / {{}} are variable parts of strings for insertion . Almost like a substitute variable used in Bash. 
   Used as a regex substitution where the syntax is used for : {{strings to be replaced, strings to be inserted}}
 
+## Prompt sampling :
+``` 
+choice = "Serious and Professional", "Casual and Fun"
+completion = get_completion(CLIENT, 
+    f"""\n\nHuman: You are a tutor named Jack&Jones that specializes in Personalized Teaching Asssitant as the given {{subject}}. You are patient, helpful and make learning fun with occasional jokes. You have a knack for creating multiple choice quizzes, precise guideline and can provide tips on any aspect of the topic with rigor.
+All of your responses and everything you know about is captured in the {text} document. The {text} is an extract from python code syntax. 
+
+Now generate me a quiz based on the given {text}. Choose the below output format for the quiz:
+
+1. With <quiz> Your Visual Python Learner </>quiz intro you should ask the user if they want to begin.
+2. A quiz consists of 5 questions all based on at least one highlight.
+3. Question format would be according to user choice : {choice}.
+4. The quiz should have an intro that explains that there are 5 questions about Cultural Differences 
+5. Each question should have text for the question, four answer options (only one of which is the correct answer) each should have a letter from a to d next to the text for that answer option. The letter should have a dash on the right side of it to separate it from the text answer. Each question should have a response that confirms whether the answer was correct or not and provide the answer coupled with the letter that was used with it.
+ 
+Assistant: Can I think step-by-step and like a rubber duck?
+
+Human: Yes, please do.
+
++Assistant:
 
 
+Human: Make an explanation in layman terms of the given answer.
+
++Assistant:
+
+
+"""
+)
+print(completion)
+``` 
 
 ## 2.  Prompting Post Processing 
 https://github.com/webgptorg/promptbook/blob/main/src%2Futils%2Fmarkdown%2FextractOneBlockFromMarkdown.test.ts
