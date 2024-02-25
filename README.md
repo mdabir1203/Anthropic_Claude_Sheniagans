@@ -5,10 +5,17 @@ Learning Outcomes :
 
 ## 
 
+## 1.  Prompting Techniques in Claude API : 
+
+- Claude uses <xml> documents underneath 
+- XML syntax is used to save promnpt responses to desired variable 
+- {} / {{}} are variable parts of strings for insertion . Almost like a substitute variable used in Bash. 
+  Used as a regex substitution where the syntax is used for : {{strings to be replaced, strings to be inserted}}
 
 
-## Prompting Post Processing
- 
+
+
+## 2.  Prompting Post Processing 
 https://github.com/webgptorg/promptbook/blob/main/src%2Futils%2Fmarkdown%2FextractOneBlockFromMarkdown.test.ts
 
 
